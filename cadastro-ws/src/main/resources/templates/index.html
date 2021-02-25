@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>CadastroApp</title>
+</head>
+
+<body>
+	<h1>Lista de Livros</h1>
+	<h3><a href="/cadastrarLivro">Cadastrar Livro</a></h3>
+	<div th:each="livro : ${livros}">
+		<div class="row">
+			<p><span th:text="${livro.nome}"></span></p>
+			<p><span th:text="${livro.autor}"></span></p>
+		</div>
+
+</body>
+</html>
+
