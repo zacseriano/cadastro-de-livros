@@ -3,7 +3,7 @@
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 	<title>CadastroApp</title>
-	<!--Import Google Icon Font-->
+	 <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
@@ -13,36 +13,29 @@
       <link rel="stylesheet" href="style/styleCss.css"/>
 </head>
 <body>
-
+	
 	<header>
 		<nav class="menu">
 		    <div class="nav-wrapper">
-		      <a href="#" class="brand-logo">Cadastro de Livros:</a>
+		      <a href="#" class="brand-logo">Lista de Livros</a>
 		      <ul id="nav-mobile" class="right hide-on-med-and-down">
-		        <li><a href="/livros" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Lista de Livros</a></li>
+		        <li><a href="/cadastrarLivro" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar livro</a></li>
 		      </ul>
 		    </div>
 		</nav>
 	
 	</header>
 	
-	
-	<th:block th:include="mensagemValidacao"></th:block>
-	<div class="container formLivro">
-	
-	<form class="container" method="post">
-		Nome: <input type="text" value="" name="nome"/>
+	<div th:each="livro : ${livros}">
 		<div class="row">
-			<div class="input-field col s6">
-				Autor: <input type="text" value="" name="autor"/>
-			</div>			
+			<p><span th:text="${livro.nome}"></span></p>
+			<p><span th:text="${livro.autor}"></span></p>
 		</div>
-		<button class="waves-effect waves-light btn" type="submit">Salvar</button>
-	
-	</form>
 	</div>
+
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
 </body>
 
 

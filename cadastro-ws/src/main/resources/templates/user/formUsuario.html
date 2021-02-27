@@ -17,10 +17,7 @@
 	<header>
 		<nav class="menu">
 		    <div class="nav-wrapper">
-		      <a href="#" class="brand-logo">Cadastro de Livros:</a>
-		      <ul id="nav-mobile" class="right hide-on-med-and-down">
-		        <li><a href="/livros" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Lista de Livros</a></li>
-		      </ul>
+		      <a href="#" class="brand-logo">Cadastro de Login:</a>		      
 		    </div>
 		</nav>
 	
@@ -28,14 +25,17 @@
 	
 	
 	<th:block th:include="mensagemValidacao"></th:block>
-	<div class="container formLivro">
+	<div class="container formUsuario">
 	
 	<form class="container" method="post">
-		Nome: <input type="text" value="" name="nome"/>
+		Nome: <input type="text" value="" name="nomeCompleto"/>
 		<div class="row">
 			<div class="input-field col s6">
-				Autor: <input type="text" value="" name="autor"/>
-			</div>			
+				Login: <input type="text" value="" name="login"/>
+			</div>	
+			<div class="input-field col s3">
+				Senha: <input type="text" value="" name="senha"/>
+			</div>		
 		</div>
 		<button class="waves-effect waves-light btn" type="submit">Salvar</button>
 	

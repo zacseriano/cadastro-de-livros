@@ -1,4 +1,4 @@
-package com.cadastrows;
+package com.cadastrows.data;
 
 import javax.sql.DataSource;
 

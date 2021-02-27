@@ -1,11 +1,14 @@
 package com.cadastrows.models;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
 
 @Entity
 public class Livro implements Serializable{
@@ -17,7 +20,11 @@ public class Livro implements Serializable{
 	private long codigo;
 	
 	private String nome;
+
 	private String autor;
+	
+	@ManyToMany
+	private List <Livro> livros;
 	
 	public long getCodigo() {
 		return codigo;
